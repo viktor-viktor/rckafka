@@ -1,0 +1,17 @@
+
+version: '3'
+services:
+  service: 
+    image: rckafka
+    build: .
+    container_name: rckafka
+    ports:
+      - "8081:8081"
+    networks:
+      - local_study
+
+networks:
+  local_study:
+    name: local_study
+    external: true
+
